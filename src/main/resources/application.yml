@@ -1,0 +1,37 @@
+spring:
+  profiles:
+    active: prod
+  mvc:
+    throw-exception-if-no-handler-found: true
+  http:
+    multipart:
+      max-file-size: 10MB
+  aop:
+    proxy-target-class: true
+  cache:
+    type: caffeine
+  mail:
+    host: smtp.163.com
+    username: alwaysacc@163.com
+    password: alwaysacc1
+    default-encoding: utf-8
+  redis:
+    database: 0
+    timeout: 1000
+    host: 127.0.0.1
+    password: 123456
+    port: 6379
+    pool:
+      max-active: 800
+      max-wait: -1
+      max-idle: 800
+      min-idle: 10
+server:
+  error:
+    whitelabel:
+      enabled: false
+  server:
+      port: 8010
+      servlet:
+logging:
+  level: com.com.daxie.daxie_api.dao=debug

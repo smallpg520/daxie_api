@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daxie.daxie_api.dao.ProblemMapper">
+  <resultMap id="BaseResultMap" type="com.daxie.daxie_api.model.Problem">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="problemId" jdbcType="VARCHAR" property="problemid" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="tag" jdbcType="VARCHAR" property="tag" />
+    <result column="incognito" jdbcType="INTEGER" property="incognito" />
+    <result column="sortId" jdbcType="INTEGER" property="sortid" />
+    <result column="replyCount" jdbcType="INTEGER" property="replycount" />
+    <result column="followCount" jdbcType="INTEGER" property="followcount" />
+    <result column="createTime" jdbcType="VARCHAR" property="createtime" />
+    <result column="userId" jdbcType="VARCHAR" property="userid" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="userImage" jdbcType="VARCHAR" property="userimage" />
+    <result column="userSignature" jdbcType="VARCHAR" property="usersignature" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+</mapper>

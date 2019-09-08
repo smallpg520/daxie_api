@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daxie.daxie_api.dao.CategoryMapper">
+  <resultMap id="BaseResultMap" type="com.daxie.daxie_api.model.Category">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="categoryid" jdbcType="INTEGER" property="categoryid" />
+    <result column="categorykind" jdbcType="VARCHAR" property="categorykind" />
+    <result column="categoryhot" jdbcType="INTEGER" property="categoryhot" />
+    <result column="categoryprice" jdbcType="INTEGER" property="categoryprice" />
+    <result column="categoryname" jdbcType="VARCHAR" property="categoryname" />
+    <result column="categorypicture" jdbcType="VARCHAR" property="categorypicture" />
+    <result column="categorysatus" jdbcType="INTEGER" property="categorysatus" />
+    <result column="categoryliren" jdbcType="INTEGER" property="categoryliren" />
+    <result column="categorysales" jdbcType="INTEGER" property="categorysales" />
+    <result column="categorydetails" jdbcType="LONGVARCHAR" property="categorydetails" />
+  </resultMap>
+ <select id="hotcategory" resultMap="BaseResultMap" resultType="integer">
+
+select *  from category   where categoryhot=#{categoryhot,jdbcType=INTEGER}
+ </select>
+
+    <select id="vaguelike" parameterType="string" resultMap="BaseResultMap">
+       select *  from category where  categoryname   like    CONCAT('%',#{categoryname,jdbcType=VARCHAR},'%')  and  categorykind=#{categorykind,jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectBy"  resultMap="BaseResultMap" resultType="com.daxie.daxie_api.model.Category">
+
+        select *  from category where
+        1=1
+        <if test="categoryprice != null and categoryprice != ''">
+            and   (categorysales ${categorysale}  )
+        </if>
+        <if test="categorylirun != ''">
+            and   (categoryliren  ${categorylirun} )
+        </if>
+        <if test="categoryprice != ''">
+            and  (categoryprice ${categoryprice} )
+        </if>
+
+
+
+
+
+    </select>
+</mapper>

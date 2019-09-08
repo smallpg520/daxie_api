@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daxie.daxie_api.dao.ArticleMapper">
+  <resultMap id="BaseResultMap" type="com.daxie.daxie_api.model.Article">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="articleId" jdbcType="VARCHAR" property="articleid" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="userId" jdbcType="VARCHAR" property="userid" />
+    <result column="readCount" jdbcType="INTEGER" property="readcount" />
+    <result column="incognito" jdbcType="INTEGER" property="incognito" />
+    <result column="tag" jdbcType="VARCHAR" property="tag" />
+    <result column="sortId" jdbcType="VARCHAR" property="sortid" />
+    <result column="createTime" jdbcType="VARCHAR" property="createtime" />
+    <result column="updateTime" jdbcType="VARCHAR" property="updatetime" />
+    <result column="likeCount" jdbcType="INTEGER" property="likecount" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="likeId" jdbcType="LONGVARCHAR" property="likeid" />
+  </resultMap>
+</mapper>

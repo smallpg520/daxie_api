@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daxie.daxie_api.dao.SortMapper">
+  <resultMap id="BaseResultMap" type="com.daxie.daxie_api.model.Sort">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="sortId" jdbcType="INTEGER" property="sortid" />
+    <result column="sortName" jdbcType="VARCHAR" property="sortname" />
+    <result column="createDate" jdbcType="VARCHAR" property="createdate" />
+    <result column="createForUser" jdbcType="VARCHAR" property="createforuser" />
+    <result column="boardUserId" jdbcType="VARCHAR" property="boarduserid" />
+  </resultMap>
+</mapper>
