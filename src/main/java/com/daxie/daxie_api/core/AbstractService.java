@@ -1,6 +1,7 @@
 package com.daxie.daxie_api.core;
 
 
+import com.daxie.daxie_api.model.Category;
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Condition;
@@ -40,8 +41,9 @@ public abstract class AbstractService<T> implements Service<T> {
         mapper.deleteByIds(ids);
     }
 
-    public void update(T model) {
+    public Category update(T model) {
         mapper.updateByPrimaryKeySelective(model);
+        return null;
     }
 
     public T findById(Integer id) {

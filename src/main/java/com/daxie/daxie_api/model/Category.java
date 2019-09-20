@@ -1,8 +1,11 @@
 package com.daxie.daxie_api.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.List;
 
+@Data
 public class Category {
     /**
      * 商品id，确定唯一的商品
@@ -39,14 +42,25 @@ public class Category {
 
     private Integer categoryliren;
 
-    private Integer categorysales;
+   private  Integer categorysales;
 
     /**
      * 商品的详情
      */
     private String categorydetails;
 
+    private  String categorybetween;
+
+    public String getCategorybetween() {
+        return categorybetween;
+    }
+
+    public void setCategorybetween(String categorybetween) {
+        this.categorybetween = categorybetween;
+    }
+
     /**
+
      * 获取商品id，确定唯一的商品
      *
      * @return categoryid - 商品id，确定唯一的商品
@@ -213,4 +227,6 @@ public class Category {
     public void setCategorydetails(String categorydetails) {
         this.categorydetails = categorydetails;
     }
+
+
 }

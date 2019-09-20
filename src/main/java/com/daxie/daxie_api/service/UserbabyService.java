@@ -1,4 +1,5 @@
 package com.daxie.daxie_api.service;
+import com.daxie.daxie_api.model.Message;
 import com.daxie.daxie_api.model.Userbaby;
 import com.daxie.daxie_api.core.Service;
 
@@ -8,4 +9,5 @@ import com.daxie.daxie_api.core.Service;
  */
 public interface UserbabyService extends Service<Userbaby> {
 
+    Userbaby selectUserByid(Integer userid);
 }

@@ -37,6 +37,7 @@ public class Result<T> {
         return this;
     }
 
+
     @Override
     public String toString() {
         return JSON.toJSONString(this);

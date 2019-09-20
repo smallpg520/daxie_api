@@ -14,6 +14,7 @@
     <result column="categorysatus" jdbcType="INTEGER" property="categorysatus" />
     <result column="categoryliren" jdbcType="INTEGER" property="categoryliren" />
     <result column="categorysales" jdbcType="INTEGER" property="categorysales" />
+      <result column="categorybetween" jdbcType="VARCHAR" property="categorybetween"/>
     <result column="categorydetails" jdbcType="LONGVARCHAR" property="categorydetails" />
   </resultMap>
  <select id="hotcategory" resultMap="BaseResultMap" resultType="integer">
@@ -21,7 +22,7 @@
 select *  from category   where categoryhot=#{categoryhot,jdbcType=INTEGER}
  </select>
 
-    <select id="vaguelike" parameterType="string" resultMap="BaseResultMap">
+    <select id="vaguelike" parameterType="string"  resultMap="BaseResultMap">
        select *  from category where  categoryname   like    CONCAT('%',#{categoryname,jdbcType=VARCHAR},'%')  and  categorykind=#{categorykind,jdbcType=VARCHAR}
     </select>
 
@@ -29,6 +30,9 @@ select *  from category   where categoryhot=#{categoryhot,jdbcType=INTEGER}
 
         select *  from category where
         1=1
+        <if test="categorykind != null">
+            and  categorykind= #{categorykind,jdbcType=INTEGER}
+        </if>
         <if test="categoryprice != null and categoryprice != ''">
             and   (categorysales ${categorysale}  )
         </if>
@@ -38,10 +42,5 @@ select *  from category   where categoryhot=#{categoryhot,jdbcType=INTEGER}
         <if test="categoryprice != ''">
             and  (categoryprice ${categoryprice} )
         </if>
-
-
-
-
-
     </select>
 </mapper>

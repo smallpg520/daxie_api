@@ -5,7 +5,8 @@ spring:
     throw-exception-if-no-handler-found: true
   http:
     multipart:
-      max-file-size: 10MB
+      max-file-size: 50MB
+      max-request-size: 50MB
   aop:
     proxy-target-class: true
   cache:
@@ -30,8 +31,12 @@ server:
   error:
     whitelabel:
       enabled: false
-  server:
-      port: 8010
-      servlet:
+  port: 8010
+  context-path: /baby
+
 logging:
   level: com.com.daxie.daxie_api.dao=debug
+
+
+
+

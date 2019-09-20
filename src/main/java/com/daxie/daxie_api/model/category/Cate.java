@@ -7,5 +7,6 @@ public class Cate {
     private  String         categorysale;
     private  String         categorylirun;
     private  String         categoryprice;
+    private  String          categorykind;
 }
 

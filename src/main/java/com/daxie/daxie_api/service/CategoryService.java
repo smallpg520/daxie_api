@@ -15,5 +15,5 @@ public interface CategoryService extends Service<Category> {
 
  public List<Category> hotcategory(Integer categoryhot);
 
- public List<Category> vaguelike(String categoryname, String categorykind);
+ public List<Category> vaguelike(String categoryname,  String categorykind);
 }

@@ -23,6 +23,16 @@ public class Userbaby {
 
     private String token;
 
+    private   Integer   status;
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
     /**
      * 获取区别于每一个用户
      *

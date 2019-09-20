@@ -18,4 +18,11 @@ import javax.annotation.Resource;
 public class UserbabyServiceImpl extends AbstractService<Userbaby> implements UserbabyService {
     @Resource
     private UserbabyMapper userbabyMapper;
+
+     @Override
+   public   Userbaby selectUserByid(Integer userid){
+
+     Userbaby   userbaby= userbabyMapper.selectUserByid(userid);
+     return   userbaby;
+   }
 }

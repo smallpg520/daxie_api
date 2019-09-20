@@ -13,4 +13,8 @@
     <result column="token" jdbcType="VARCHAR" property="token" />
   </resultMap>
 
+  <select id="selectUserByid" parameterType="int" resultMap="BaseResultMap">
+
+select * from message where   kind=#{userid,jdbcType=INTEGER}
+  </select>
 </mapper>
